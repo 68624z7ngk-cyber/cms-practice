@@ -1,5 +1,10 @@
 from django.shortcuts import render
+from .models import Portfolio
 
 
 def index(request):
-    return render(request, "site_content/index.html")
+    portfolios = Portfolio.objects.all()
+
+    return render(request, "site_content/index.html", {
+        "portfolios": portfolios,
+    })
