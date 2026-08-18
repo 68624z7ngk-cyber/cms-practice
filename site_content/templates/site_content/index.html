@@ -87,33 +87,7 @@
 							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
 							fusce hendrerit lacus ridiculus.</p>
 
-							<div class="row">
-
-								{% for portfolio in portfolios %}
-
-									<div class="col-4 col-12-mobile">
-										<article class="item">
-
-											{% if portfolio.image %}
-												<a href="#" class="image fit">
-													<img src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}" />
-												</a>
-											{% endif %}
-
-											<header>
-												<h3>{{ portfolio.title }}</h3>
-											</header>
-
-										</article>
-									</div>
-
-								{% empty %}
-
-									<p>Portfolioがありません。</p>
-
-								{% endfor %}
-
-							</div>
+							<div id="react-portfolio"></div>
 
 						</div>
 					</section>
@@ -187,6 +161,8 @@
 			<script src="{% static 'js/breakpoints.min.js' %}"></script>
 			<script src="{% static 'js/util.js' %}"></script>
 			<script src="{% static 'js/main.js' %}"></script>
+			<script type="module" src="http://localhost:5173/@vite/client"></script>
+			<script type="module" src="http://localhost:5173/src/main.jsx"></script>
 
 	</body>
 </html>
