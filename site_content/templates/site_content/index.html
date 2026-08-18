@@ -93,9 +93,17 @@
 
 									<div class="col-4 col-12-mobile">
 										<article class="item">
+
+											{% if portfolio.image %}
+												<a href="#" class="image fit">
+													<img src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}" />
+												</a>
+											{% endif %}
+
 											<header>
 												<h3>{{ portfolio.title }}</h3>
 											</header>
+
 										</article>
 									</div>
 
