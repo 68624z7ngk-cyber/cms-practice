@@ -6,7 +6,7 @@ function App() {
   const [openId, setOpenId] = useState(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/portfolios/")
+    fetch("https://cms-practice-pjg3.onrender.com/api/portfolios/")
       .then((response) => response.json())
       .then((data) => {
         setPortfolios(data);
@@ -35,7 +35,7 @@ function App() {
           >
             {portfolio.image && (
               <img
-                src={`http://127.0.0.1:8000${portfolio.image}`}
+                src={`https://cms-practice-pjg3.onrender.com${portfolio.image}`}
                 alt={portfolio.title}
               />
             )}
@@ -59,7 +59,7 @@ function App() {
                 <div key={portfolio.id}>
                   {portfolio.image && (
                     <img
-                      src={`http://127.0.0.1:8000${portfolio.image}`}
+                      src={`https://cms-practice-pjg3.onrender.com${portfolio.image}`}
                       alt={portfolio.title}
                     />
                   )}
