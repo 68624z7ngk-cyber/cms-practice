@@ -6,7 +6,7 @@ function App() {
   const [openId, setOpenId] = useState(null);
 
   useEffect(() => {
-    fetch("https://cms-practice-pjg3.onrender.com/api/portfolios/")
+    fetch("/api/portfolios/")
       .then((response) => response.json())
       .then((data) => {
         setPortfolios(data);
